@@ -1,20 +1,22 @@
 # Excalidraw Persist
 
-A self-hostable app with server-side persistence and multi-boards based on Excalidraw.
+A self-hostable app with server-side persistence and multiple boards based on Excalidraw.
 
 `docker run -p 80:80 -p 4000:4000 ghcr.io/ozencb/excalidraw-persist:latest`
 
-<img width="1440" alt="image" src="https://github.com/user-attachments/assets/88510de0-a231-4a7b-83e2-e78a010296d5" />
+<img width="1440" height="790" alt="Screenshot" src="https://github.com/user-attachments/assets/18f0f065-58d1-42d8-94d6-b29531b4b685" />
+
+
 
 ## Features
 
-- 💾 Server-side persistence of drawings
+- 💾 Server-side persistence of drawings, images, library objects
 - 📑 Multiple boards/tabs support
 - 🗑️ Trash functionality for deleted boards
 - 🗃️ SQLite database for simple deployment
 
+
 ## TODO
-- [ ] Support file uploads
 - [ ] Collaboration support
 
 ## Development
