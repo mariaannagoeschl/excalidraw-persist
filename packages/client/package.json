@@ -13,10 +13,12 @@
   },
   "dependencies": {
     "@excalidraw/excalidraw": "0.18.0",
+    "@tailwindcss/vite": "^4.1.13",
     "lodash.debounce": "^4.0.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^7.4.0",
+    "tailwindcss": "^4.1.13",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
@@ -36,6 +38,7 @@
     "prettier": "^3.0.0",
     "sass": "^1.69.5",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "vite-plugin-pwa": "^1.2.0"
   }
 }

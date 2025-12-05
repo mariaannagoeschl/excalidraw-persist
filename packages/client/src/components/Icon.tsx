@@ -2,7 +2,7 @@ import Utils from '../utils';
 import { useTheme } from '../contexts/ThemeProvider';
 import { THEME } from '@excalidraw/excalidraw';
 
-type AvailableIcons = 'trash' | 'close' | 'plus';
+type AvailableIcons = 'trash' | 'close' | 'plus' | 'home';
 
 interface IconComponentProps {
   className?: string;
@@ -80,6 +80,24 @@ const Plus = ({ className }: IconComponentProps) => {
   );
 };
 
+const Home = ({ className }: IconComponentProps) => {
+  return (
+    <svg
+      fill="none"
+      height="16"
+      viewBox="0 0 16 16"
+      width="16"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M1 6V15H6V11C6 9.89543 6.89543 9 8 9C9.10457 9 10 9.89543 10 11V15H15V6L8 0L1 6Z"
+        fill="#030708"
+      />
+    </svg>
+  );
+};
+
 interface IconProps {
   name: AvailableIcons;
   className?: string;
@@ -99,6 +117,8 @@ const Icon = ({ name, className }: IconProps) => {
       return <Close className={iconClassName} />;
     case 'plus':
       return <Plus className={iconClassName} />;
+    case 'home':
+      return <Home className={iconClassName} />;
     default:
       return Utils.exhaustiveMatchingGuard(name);
   }

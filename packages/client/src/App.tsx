@@ -5,6 +5,8 @@ import { BoardProvider, useBoardContext } from './contexts/BoardProvider';
 import { ThemeProvider } from './contexts/ThemeProvider';
 import './styles/App.scss';
 import '@excalidraw/excalidraw/index.css';
+import Header from './components/Header';
+import Overview from './components/Overview';
 
 const HomePage = () => {
   const { isLoading, boards } = useBoardContext();
@@ -29,7 +31,17 @@ const App = () => {
             path="/board/:boardId"
             element={
               <BoardProvider>
+                <Header />
                 <BoardPage />
+              </BoardProvider>
+            }
+          />
+                    <Route
+            path="/overview"
+            element={
+              <BoardProvider>
+                <Header />
+                <Overview />
               </BoardProvider>
             }
           />
@@ -37,6 +49,7 @@ const App = () => {
             path="/"
             element={
               <BoardProvider>
+                <Header />
                 <HomePage />
               </BoardProvider>
             }

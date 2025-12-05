@@ -1,7 +1,7 @@
 export interface Board {
   id: number;
   name: string;
-  status: 'ACTIVE' | 'DELETED';
+  status: 'ACTIVE' | 'CLOSED' | 'DELETED';
   created_at: number;
   updated_at: number;
 }

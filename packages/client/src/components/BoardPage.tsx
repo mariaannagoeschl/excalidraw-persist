@@ -1,4 +1,3 @@
-import Header from './Header';
 import { useBoardContext } from '../contexts/BoardProvider';
 import '../styles/BoardPage.scss';
 import ExcalidrawEditor from './ExcalidrawEditor';
@@ -28,7 +27,6 @@ const BoardPage = () => {
 
   return (
     <div className="board-page">
-      <Header />
       <div className="editor-container">
         <ExcalidrawEditor boardId={activeBoardId} />
       </div>
