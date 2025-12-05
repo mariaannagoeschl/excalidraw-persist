@@ -28,7 +28,7 @@ const BoardPage = () => {
   return (
     <div className="board-page">
       <div className="editor-container">
-        <ExcalidrawEditor boardId={activeBoardId} />
+        <ExcalidrawEditor key={activeBoardId} boardId={activeBoardId} />
       </div>
     </div>
   );

@@ -22,6 +22,20 @@ export interface Element {
   is_deleted: boolean;
 }
 
+export interface StoredFile {
+  id: string;
+  board_id: number;
+  data: string;
+  created_at: number;
+  updated_at: number;
+}
+
+export interface LibraryRecord {
+  board_id: number;
+  data: string;
+  updated_at: number;
+}
+
 export interface ExcalidrawElement {
   id: string;
   type: string;
@@ -64,6 +78,41 @@ export interface ExcalidrawElement {
 
   // For other unknown properties
   [key: string]: unknown;
+}
+
+export interface ExcalidrawBinaryFileData {
+  id: string;
+  dataURL: string;
+  mimeType: string;
+  created?: number;
+  lastRetrieved?: number;
+  size?: number;
+  type?: string;
+  width?: number;
+  height?: number;
+  [key: string]: unknown;
+}
+
+export type ExcalidrawFilesMap = Record<string, ExcalidrawBinaryFileData>;
+
+export interface ExcalidrawSceneData {
+  elements: ExcalidrawElement[];
+  files: ExcalidrawFilesMap;
+}
+
+export interface ExcalidrawLibraryItem {
+  id: string;
+  status: 'published' | 'unpublished';
+  elements: ExcalidrawElement[];
+  created: number;
+  name?: string;
+  error?: string;
+}
+
+export type ExcalidrawLibraryItems = ExcalidrawLibraryItem[];
+
+export interface LibraryPersistedData {
+  libraryItems: ExcalidrawLibraryItems;
 }
 
 export type UpdateBoardInput = {
